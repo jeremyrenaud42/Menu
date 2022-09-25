@@ -1,18 +1,16 @@
-#function mettreAJourDossier ($lienweb, $dossierParentApplication, $nomApplicationAMettreAJour) 
-#lien github/ftp, Path de dossier parents du dossier à mettre à jours , nom du dossier à mettre à jours dans la clé
-
 $driveletter = $pwd.drive.name #retourne la lettre du disque actuel
 $root = "$driveletter" + ":" #rajoute  : pour que sa fit dans le path
+$applications = "$root\\_Tech\applications" #chemin du dossier applications
 
-$categorie = "diagnostique"
-$nomApplicationAMettreAJour = "Batterie"
-$liengithub = 'https://raw.githubusercontent.com/jeremyrenaud42/Menu/main/test.version.txt'
+#$categorie = "diagnostique"
+#$nomApplicationAMettreAJour = "Batterie"
+#$liengithub = 'https://raw.githubusercontent.com/jeremyrenaud42/Menu/main/test.version.txt'
 
-#créer dossier Temp (Testé et fonctionnel)
 #dossier temp créé dans la catégorie
-function tempfolder
+
+function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
 {
-$dossierTemp = "$root\_Tech\applications\$categorie\Temp" #path
+    $dossierTemp = "$root\_Tech\applications\$categorie\source\$nomApplicationAMettreAJour\Temp" #path
     try 
     {
         New-Item -Path $dossierTemp -ItemType Directory | Out-Null #créer dossier temp
@@ -22,21 +20,16 @@ $dossierTemp = "$root\_Tech\applications\$categorie\Temp" #path
         Write-Error "Erreur! Le dossier temporaire n'a pas pu être créé!"
         return
     }
-}
-#Il faut aller chercher le fichier version dans le dossier de l'app en question
-#Il faut download le fichier version depuis github
-#Il faut get-content dans les 2 fichier et effectuer l'Update si nécéssaire
 
+    #Il faut download le fichier version depuis github
+    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile $applications\$categorie\$nomApplicationAMettreAJour\speccy.version.txt | Out-Null
 
-#Vérifie si une nouvelle version est disponible
-function verif
-{
-
-    Invoke-WebRequest $liengithub -OutFile $dossierTemp\app.version.txt | Out-Null #Download du fichier version
-
-    $versionTemp = Get-Content -Path "$dossierTemp\$nomApplicationAMettreAJour\*.version.txt" #fichier version nouveau
-    $versionActuelle = Get-Content -Path "$root\_tech\applications\$categorie\$nomApplicationAMettreAJour\*.version.txt" #fichier version actuel
-    if ($versionTemp -gt $versionActuelle) 
+    #Il faut aller chercher le chiffre dans les 2 fichiers
+    $valuedownloadfile = Get-Content -Path "$dossierTemp\*.version.txt" #fichier version nouveau
+    $valueactualfile = Get-Content -Path "$applications\$categorie\source\$nomApplicationAMettreAJour\*.version.txt" #fichier version actuel
+    
+    #Il faut comparer les 2 valeurs
+    if ($valuedownloadfile -gt $valueactualfile) 
     { 
         try 
         {
@@ -46,15 +39,10 @@ function verif
         }
         catch 
         {
-            Write-Error "Erreur! La copie du dossier temporaire de mise à jour ($dossierTemp) vers le dossier d'application ($dossierParentApplication) a échoué!"
+            Write-Error "Erreur! La copie du dossier temporaire de mise à jour a échoué!"
             return
         }
     } 
     Remove-Item $dossierTemp -Recurse -Force #Supprime le dossier temp
     return  
 }
-
-
-    
-
-    #exemple: verifiermiseajours "https://mega.nz/folder/Fx02GRya#wmbMcqi98YPVVVnhNkvxxw" "Diagnostique" "verifAida"
