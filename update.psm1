@@ -22,7 +22,7 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
     }
 
     #Il faut download le fichier version depuis github
-    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile $applications\$categorie\$nomApplicationAMettreAJour\speccy.version.txt | Out-Null
+    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile $applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt | Out-Null
 
     #Il faut aller chercher le chiffre dans les 2 fichiers
     $valuedownloadfile = Get-Content -Path "$dossierTemp\*.version.txt" #fichier version nouveau
