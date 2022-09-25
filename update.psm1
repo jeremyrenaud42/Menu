@@ -43,6 +43,6 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
             return
         }
     } 
-    Remove-Item $dossierTemp -Recurse -Force #Supprime le dossier temp
+    #Remove-Item $dossierTemp -Recurse -Force #Supprime le dossier temp
     return  
 }
