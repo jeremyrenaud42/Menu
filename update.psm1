@@ -44,5 +44,5 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligit
 }
 
 #exemple de call
-#Import-Module "E:\_Tech\Applications\Source\update.psm1"
+#Import-Module "$root\_Tech\Applications\Source\update.psm1"
 #Update "Diagnostique" "Speccy" 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' 'https://raw.githubusercontent.com/jeremyrenaud42/Diagnostique/main/Speccy.zip'
