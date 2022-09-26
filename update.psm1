@@ -2,18 +2,12 @@ $driveletter = $pwd.drive.name #retourne la lettre du disque actuel
 $root = "$driveletter" + ":" #rajoute  : pour que sa fit dans le path
 $applications = "$root\\_Tech\applications" #chemin du dossier applications
 
-#$categorie = "diagnostique"
-#$nomApplicationAMettreAJour = "Batterie"
-#$liengithub = 'https://raw.githubusercontent.com/jeremyrenaud42/Menu/main/test.version.txt'
-
-#dossier temp créé dans la catégorie
-
-function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
+function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligithub)
 {
     $dossierTemp = "$root\_Tech\applications\$categorie\source\$nomApplicationAMettreAJour\Temp" #path
     try 
     {
-        New-Item -Path $dossierTemp -ItemType Directory | Out-Null #créer dossier temp
+        New-Item -Path $dossierTemp -ItemType Directory -Force | Out-Null #créer dossier temp
     }   
     catch 
     {
@@ -22,7 +16,7 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
     }
 
     #Il faut download le fichier version depuis github
-    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt" | Out-Null
+    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" | Out-Null
 
     #Il faut aller chercher le chiffre dans les 2 fichiers
     $valuedownloadfile = Get-Content -Path "$dossierTemp\*.version.txt" #fichier version nouveau
@@ -34,15 +28,17 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub)
         try 
         {
             Write-Host "Mise à jour en cours..."
-            #Copy-Item -Path "$dossierTemp\$nomApplicationAMettreAJour" -Destination $dossierParentApplication -Recurse -Force | Out-Null
-            #Mettre un invokeweb request pour faire l'update
+            Invoke-WebRequest $lienappligithub -OutFile "$applications\$categorie\source\Speccy.zip" | Out-Null
+            Expand-Archive "$applications\$categorie\source\Speccy.zip" "$applications\$categorie\source"
+            Remove-Item "$applications\$categorie\source\Speccy.zip"
+            Copy-Item "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" -Destination "$applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt"
         }
         catch 
         {
-            Write-Error "Erreur! La copie du dossier temporaire de mise à jour a échoué!"
+            Write-Error "Erreur!"
             return
         }
     } 
-    #Remove-Item $dossierTemp -Recurse -Force #Supprime le dossier temp
+    Remove-Item $dossierTemp -Recurse -Force #Supprime le dossier temp
     return  
 }
