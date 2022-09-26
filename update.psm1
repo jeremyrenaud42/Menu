@@ -16,7 +16,7 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligit
     }
 
     #Download le fichier version depuis github
-    Invoke-WebRequest 'https://raw.githubusercontent.com/jeremyrenaud42/versions/main/Diagnostique/speccy.version.txt' -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" | Out-Null
+    Invoke-WebRequest $liengithub -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\$nomApplicationAMettreAJour.version.txt" | Out-Null
 
     #cherche le chiffre dans les 2 fichiers
     $valuedownloadfile = Get-Content -Path "$dossierTemp\*.version.txt" #fichier version nouveau
@@ -28,10 +28,10 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligit
         try 
         {
             Write-Host "Mise à jour en cours..."
-            Invoke-WebRequest $lienappligithub -OutFile "$applications\$categorie\source\Speccy.zip" | Out-Null
-            Expand-Archive "$applications\$categorie\source\Speccy.zip" "$applications\$categorie\source" -Force | Out-Null
-            Remove-Item "$applications\$categorie\source\Speccy.zip" -Force | Out-Null
-            Copy-Item "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" -Destination "$applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt" -Force | Out-Null #Met le fichier version a jour.
+            Invoke-WebRequest $lienappligithub -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour.zip" | Out-Null
+            Expand-Archive "$applications\$categorie\source\$nomApplicationAMettreAJour.zip" "$applications\$categorie\source" -Force | Out-Null
+            Remove-Item "$applications\$categorie\source\$nomApplicationAMettreAJour.zip" -Force | Out-Null
+            Copy-Item "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\$nomApplicationAMettreAJour.version.txt" -Destination "$applications\$categorie\source\$nomApplicationAMettreAJour\$nomApplicationAMettreAJour.version.txt" -Force | Out-Null #Met le fichier version a jour.
         }
         catch 
         {
