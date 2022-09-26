@@ -29,9 +29,9 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligit
         {
             Write-Host "Mise à jour en cours..."
             Invoke-WebRequest $lienappligithub -OutFile "$applications\$categorie\source\Speccy.zip" | Out-Null
-            Expand-Archive "$applications\$categorie\source\Speccy.zip" "$applications\$categorie\source"
-            Remove-Item "$applications\$categorie\source\Speccy.zip"
-            Copy-Item "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" -Destination "$applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt"
+            Expand-Archive "$applications\$categorie\source\Speccy.zip" "$applications\$categorie\source" -Force
+            Remove-Item "$applications\$categorie\source\Speccy.zip" -Force
+            Copy-Item "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\speccy.version.txt" -Destination "$applications\$categorie\source\$nomApplicationAMettreAJour\speccy.version.txt" -Force
         }
         catch 
         {
