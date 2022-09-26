@@ -19,7 +19,7 @@ function Update($categorie,$nomApplicationAMettreAJour,$liengithub,$lienappligit
     Invoke-WebRequest $liengithub -OutFile "$applications\$categorie\source\$nomApplicationAMettreAJour\Temp\$nomApplicationAMettreAJour.version.txt" | Out-Null
 
     #cherche le chiffre dans les 2 fichiers
-    $valuedownloadfile = Get-Content -Path "$dossierTemp\*.version.txt" #fichier version nouveau
+    $valuedownloadfile = Get-Content -Path "$dossierTemp\$nomApplicationAMettreAJour.version.txt" #fichier version nouveau
     $valueactualfile = Get-Content -Path "$applications\$categorie\source\$nomApplicationAMettreAJour\*.version.txt" #fichier version actuel
     
     #compare les 2 valeurs
