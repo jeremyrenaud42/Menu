@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="688" Width="1041" ResizeMode="CanMinimize" Icon="c:\_tech\Applications\source\images\Icone.ico">
+        Title="Menu - Boite à outils du technicien" Height="688" Width="1041" ResizeMode="CanMinimize" Icon="c:\_tech\Applications\source\images\Icone.ico" Topmost="True">
     <Grid x:Name="Background_gif">
         <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\fondpluiesize.gif"/>
         <Button x:Name="btnInstall" Content="Installation&#xa; Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
