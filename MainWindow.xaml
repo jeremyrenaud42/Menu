@@ -8,7 +8,7 @@
         Title="MainWindow" Height="688" Width="1041">
     <Grid x:Name="Background_gif">
         <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\fondpluiesize.gif"/>
-        <Button x:Name="btnInstall" Content="Installation&#xa; Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold" MouseEnter="Test"/>
+        <Button x:Name="btnInstall" Content="Installation&#xa; Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnOptiNett" Content="Optimisation &#xa;et Nettoyage" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnDiagnostic" Content="Diagnostique" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnDesinfection" Content="Désinfection" HorizontalAlignment="Center" Margin="0,325,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
