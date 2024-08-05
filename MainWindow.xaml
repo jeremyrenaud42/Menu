@@ -28,5 +28,7 @@
         <TextBlock x:Name="txtBlkFTPVersion" Text="Introuvable" HorizontalAlignment="Left" Margin="817,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFFC0D0D" FontSize="18"/>
         <Button x:Name="btnWinget" Content="Corriger" HorizontalAlignment="Left" Margin="930,115,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnChoco" Content="Corriger" HorizontalAlignment="Left" Margin="930,143,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnForceUpdate" Content="Tout mettre à jour" HorizontalAlignment="Left" Margin="887,591,0,0" VerticalAlignment="Top" Height="32" Width="144" FontSize="16"/>
+        <Label x:Name="lblFavoris" Content="Favoris" HorizontalAlignment="Left" Margin="80,36,0,0" VerticalAlignment="Top" Height="42" Width="127" FontSize="22" Foreground="#FFE8DBDB" HorizontalContentAlignment="Center" Visibility="Hidden"/>
     </Grid>
 </Window>
