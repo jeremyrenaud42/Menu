@@ -8,15 +8,15 @@
         Title="Menu - Boite à outils du technicien" Height="688" Width="1041" ResizeMode="CanMinimize" Icon="c:\_tech\Applications\source\images\Icone.ico" Topmost="True" WindowStartupLocation="CenterScreen">
     <Grid x:Name="Grid">
         <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\fondpluiesize.gif"/>
-        <Button x:Name="btnInstall" Content="Installation&#xa; Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
+        <Button x:Name="btnInstall" Content="Configuration&#xa; du Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnOptiNett" Content="Optimisation &#xa;et Nettoyage" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnDiagnostic" Content="Diagnostique" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnDesinfection" Content="Désinfection" HorizontalAlignment="Center" Margin="0,325,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
         <Button x:Name="btnFix" Content="Fix" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="DarkRed" BorderThickness="2,2,2,2" FontWeight="Bold"/>
-        <Button x:Name="btnQuit" Content="Quitter" HorizontalAlignment="Center" Margin="0,575,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="black" BorderThickness="2,2,2,2" Foreground="#FFA50606" FontWeight="Bold"/>
+        <Button x:Name="btnQuit" Content="      Quitter &#xa;et Supprimer" HorizontalAlignment="Center" Margin="0,575,0,0" VerticalAlignment="Top" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="black" BorderThickness="2,2,2,2" Foreground="#FFA50606" FontWeight="Bold"/>
         <Button x:Name="btnChangeLog" Content="Changelog" HorizontalAlignment="Left" Margin="28,591,0,0" VerticalAlignment="Top" Height="43" Width="104" FontFamily="Microsoft Sans Serif" FontSize="16" Background="Black" BorderThickness="2,2,2,2" Foreground="White"/>
         <Label x:Name="lblChoisirOption" Content="Choisissez une option" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Width="400" Height="42" Background="DarkRed" Foreground="White" FontSize="22"/>
-        <Label x:Name="lblSignature" Content="Propriété de Jérémy Renaud" HorizontalAlignment="Left" Margin="866,646,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Background="black" Foreground="gray" Width="175"/>
+        <Label x:Name="lblSignature" Content="Propriété de Jérémy Renaud" HorizontalAlignment="Left" Margin="846,626,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Background="black" Foreground="gray" Width="175"/>
         <Label x:Name="lblStatus" Content="Statut" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="806,49,0,0" VerticalAlignment="Top" Width="113" Height="36" Background="#FF6A5858" Foreground="White" FontSize="22"/>
         <Label x:Name="lblWingetVersion" Content="Winget" HorizontalAlignment="Left" Margin="704,100,0,0" VerticalAlignment="Top" Height="44" Width="113" Foreground="#FFF7EDED" FontSize="20"/>
         <TextBlock x:Name="txtBlkWingetVersion" Text="Introuvable" HorizontalAlignment="Left" Margin="817,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFFC0D0D" FontSize="18"/>
@@ -28,7 +28,7 @@
         <TextBlock x:Name="txtBlkFTPVersion" Text="Introuvable" HorizontalAlignment="Left" Margin="817,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFFC0D0D" FontSize="18"/>
         <Button x:Name="btnWinget" Content="Corriger" HorizontalAlignment="Left" Margin="930,115,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnChoco" Content="Corriger" HorizontalAlignment="Left" Margin="930,143,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnForceUpdate" Content="Tout mettre à jour" HorizontalAlignment="Left" Margin="887,591,0,0" VerticalAlignment="Top" Height="32" Width="144" FontSize="16"/>
+        <Button x:Name="btnForceUpdate" Content="Tout mettre à jour" HorizontalAlignment="Left" Margin="807,591,0,0" VerticalAlignment="Top" Height="32" Width="144" FontSize="16"/>
         <Label x:Name="lblFavoris" Content="Favoris" HorizontalAlignment="Left" Margin="80,36,0,0" VerticalAlignment="Top" Height="42" Width="127" FontSize="22" Foreground="#FFE8DBDB" HorizontalContentAlignment="Center" Visibility="Hidden"/>
     </Grid>
 </Window>
