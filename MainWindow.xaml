@@ -30,7 +30,7 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="Grid">
-        <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\background_menu_Automne.png"/>
+        <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\background_menu.jpeg"/>
         <Button x:Name="btnInstall" Style="{StaticResource ButtonStyle}" Content="Configuration&#xa; du Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnOptiNett" Style="{StaticResource ButtonStyle}" Content="Optimisation &#xa;et Nettoyage" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnDiagnostic" Style="{StaticResource ButtonStyle}" Content="Diagnostique" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top"/>
