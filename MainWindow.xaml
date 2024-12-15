@@ -33,7 +33,7 @@
         <Image x:Name="pictureBoxBackGround" HorizontalAlignment="Center" Height="688" VerticalAlignment="Top" Width="1041" Source="c:\_tech\Applications\source\images\background_menu.jpeg"/>
         <Rectangle Fill="Black" Opacity="0.30" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Button x:Name="btnInstallation" Style="{StaticResource ButtonStyle}" Content="Configuration&#xa; du Windows" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnOpti_Nettoyage" Style="{StaticResource ButtonStyle}" Content="Optimisation &#xa;et Nettoyage" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnOptimisation_Nettoyage" Style="{StaticResource ButtonStyle}" Content="Optimisation &#xa;et Nettoyage" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnDiagnostique" Style="{StaticResource ButtonStyle}" Content="Diagnostique" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnDesinfection" Style="{StaticResource ButtonStyle}" Content="Désinfection" HorizontalAlignment="Center" Margin="0,325,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnFix" Style="{StaticResource ButtonStyle}" Content="Fix" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top"/>
