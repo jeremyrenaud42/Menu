@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStyle="None" Height="688" Width="1041" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent">
     <Window.Resources>
-        <ResourceDictionary Source="c:\_tech\Applications\source\Resources.xaml"/>
+        <ResourceDictionary Source="c:\_Tech\Applications\source\Resources.xaml"/>
     </Window.Resources>
 
     <Grid x:Name="GridMenu">
@@ -43,11 +43,11 @@
         <Label x:Name="lblChoisirOption" Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="1" Content="Choisissez une option" VerticalAlignment="Center" Width="400" Background="DarkRed"/>
 
         <StackPanel x:Name="SPBtnMenu" Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button x:Name="btnInstallation" Style="{StaticResource ButtonStyle}" Content="Configuration&#xa; du Windows"/>
-            <Button x:Name="btnOptimisation_Nettoyage" Style="{StaticResource ButtonStyle}" Content="Optimisation &#xa;et Nettoyage"/>
-            <Button x:Name="btnDiagnostique" Style="{StaticResource ButtonStyle}" Content="Diagnostique"/>
-            <Button x:Name="btnDesinfection" Style="{StaticResource ButtonStyle}" Content="Désinfection"/>
-            <Button x:Name="btnFix" Style="{StaticResource ButtonStyle}" Content="Fix"/>
+            <Button x:Name="btnInstallation" Style="{StaticResource MenuButtonStyle}" Content="Configuration&#xa; du Windows"/>
+            <Button x:Name="btnOptimisation_Nettoyage" Style="{StaticResource MenuButtonStyle}" Content="Optimisation &#xa;et Nettoyage"/>
+            <Button x:Name="btnDiagnostique" Style="{StaticResource MenuButtonStyle}" Content="Diagnostique"/>
+            <Button x:Name="btnDesinfection" Style="{StaticResource MenuButtonStyle}" Content="Désinfection"/>
+            <Button x:Name="btnFix" Style="{StaticResource MenuButtonStyle}" Content="Fix"/>
         </StackPanel>
 
         <Button x:Name="btnQuit" Content="      Quitter &#xa;et Supprimer" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Height="65" Width="150" FontFamily="Microsoft Sans Serif" FontSize="16" Background="black" BorderThickness="2" Foreground="#FFA50606" FontWeight="Bold" ToolTip="Supprime toutes les traces"/>
@@ -66,5 +66,7 @@
             <Label x:Name="lblFTPVersion" Content="FTP" Style="{StaticResource StatusLabelStyle}" ToolTip="Obligatoire"/>
             <TextBlock x:Name="txtBlkFTPVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
         </StackPanel>
+        <Button x:Name="btnWinget" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,25,0"/>
+        <Button x:Name="btnChoco" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,105,25,0"/>
     </Grid>
 </Window>
