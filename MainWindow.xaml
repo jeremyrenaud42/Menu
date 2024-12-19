@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Menu - Boite à outils du technicien" WindowStyle="None" Height="688" Width="1041" Icon="c:\_tech\Applications\source\images\Icone.ico" WindowStartupLocation="CenterScreen">
+       WindowStyle="None" Height="688" Width="1041" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="FontFamily" Value="Microsoft Sans Serif"/>
@@ -74,7 +74,7 @@
         <Button x:Name="btnmin" Grid.Row="0" Grid.Column="2" Content="-" Margin="0,0,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="60" Height="40" FontSize="30" Background="Transparent" Foreground ="Azure" BorderBrush="Transparent" FontWeight="Bold"/>
 
         <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Margin="4,4,0,0" Width="32" Source="C:/_Tech/Applications/Source/Images/Icone.ico"/>
-        <Label x:Name="lblTitre" Content="Configuration du Windows" Grid.RowSpan="3" Grid.ColumnSpan="3" FontWeight="SemiBold" Foreground="Azure" FontSize="16" FontFamily="Arial" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top" Width="400"/>
+        <Label x:Name="lblTitre" Content="Menu - Boite à outils du technicien" Grid.RowSpan="3" Grid.ColumnSpan="3" FontWeight="SemiBold" Foreground="Azure" FontSize="16" FontFamily="Arial" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top" Width="400"/>
         <Label x:Name="lblChoisirOption" Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="1" Content="Choisissez une option" VerticalAlignment="Center" Width="400" Background="DarkRed"/>
         
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
