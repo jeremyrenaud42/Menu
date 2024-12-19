@@ -7,42 +7,7 @@
         mc:Ignorable="d"
         WindowStyle="None" Height="688" Width="1041" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent">
     <Window.Resources>
-        <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="FontFamily" Value="Microsoft Sans Serif"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Background" Value="DarkRed"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Height" Value="65"/>
-            <Setter Property="Width" Value="150"/>
-            <Setter Property="Grid.Row" Value="1"/>
-            <Setter Property="Grid.Column" Value="1"/>
-            <Setter Property="Margin" Value="5"/>
-        </Style>
-        <Style x:Key="LabelStyle" TargetType="Label">
-            <Setter Property="FontFamily" Value="Microsoft Sans Serif"/>
-            <Setter Property="FontSize" Value="22"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Height" Value="42"/>
-            <Setter Property="HorizontalAlignment" Value="center"/>
-        </Style>
-        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Foreground" Value="red"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="HorizontalAlignment" Value="center"/>
-            <Setter Property="VerticalAlignment" Value="center"/>
-        </Style>
-        <Style x:Key="StatusLabelStyle" TargetType="Label">
-            <Setter Property="Grid.Row" Value="1"/>
-            <Setter Property="Grid.Column" Value="1"/>
-            <Setter Property="HorizontalAlignment" Value="center"/>
-            <Setter Property="VerticalAlignment" Value="center"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="Foreground" Value="white"/>
-        </Style>
+        <ResourceDictionary Source="c:\_tech\Applications\source\Resources.xaml"/>
     </Window.Resources>
 
     <Grid x:Name="GridMenu">
@@ -58,9 +23,9 @@
         </Grid.RowDefinitions>
 
         <Image x:Name="pictureBoxBackGround" Stretch="Fill" Source="c:\_tech\Applications\source\images\background_menu.jpeg" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
-        <Rectangle Fill="Black" Opacity="0.30" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        <Rectangle x:Name="RectBG" Fill="Black" Opacity="0.30" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
 
-        <Rectangle Margin="0,0,0,0" Width="1041" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="3" Grid.ColumnSpan="3">
+        <Rectangle x:Name="RectTitleBar" Margin="0,0,0,0" Width="1041" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#2b2d30" Offset="0" />
@@ -76,8 +41,8 @@
         <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Margin="4,4,0,0" Width="32" Source="C:/_Tech/Applications/Source/Images/Icone.ico"/>
         <Label x:Name="lblTitre" Content="Menu - Boite à outils du technicien" Grid.RowSpan="3" Grid.ColumnSpan="3" FontWeight="SemiBold" Foreground="Azure" FontSize="16" FontFamily="Arial" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top" Width="400"/>
         <Label x:Name="lblChoisirOption" Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="1" Content="Choisissez une option" VerticalAlignment="Center" Width="400" Background="DarkRed"/>
-        
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+        <StackPanel x:Name="SPBtnMenu" Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Button x:Name="btnInstallation" Style="{StaticResource ButtonStyle}" Content="Configuration&#xa; du Windows"/>
             <Button x:Name="btnOptimisation_Nettoyage" Style="{StaticResource ButtonStyle}" Content="Optimisation &#xa;et Nettoyage"/>
             <Button x:Name="btnDiagnostique" Style="{StaticResource ButtonStyle}" Content="Diagnostique"/>
@@ -90,17 +55,16 @@
         <Button x:Name="btnForceUpdate" Content="Tout mettre à jour" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="32" Width="144" FontSize="16" Margin="30" ToolTip="Update tous les .PS1"/>
         <Label x:Name="lblSignature" Content="Propriété de Jérémy Renaud" Grid.Row="2" Grid.Column="2" HorizontalAlignment="right" VerticalAlignment="Bottom" Background="black" Foreground="gray" Width="175"/>
 
-
         <Label x:Name="lblStatus" Content="Statut" Style="{StaticResource LabelStyle}" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" Width="113" Height="36" Background="#FF6A5858"/>
-        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30">
+        <StackPanel x:Name="SPStatus" Grid.Row="1" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30">
             <Label x:Name="lblWingetVersion" Content="Winget" Style="{StaticResource StatusLabelStyle}" ToolTip="Package manager"/>
-        <TextBlock x:Name="txtBlkWingetVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock x:Name="txtBlkWingetVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
             <Label x:Name="lblChocoVersion" Content="Choco" Style="{StaticResource StatusLabelStyle}" ToolTip="Package manager"/>
-        <TextBlock x:Name="txtBlkChocoVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock x:Name="txtBlkChocoVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
             <Label x:Name="lblGitVersion" Content="Github" Style="{StaticResource StatusLabelStyle}" ToolTip="Obligatoire"/>
-        <TextBlock x:Name="txtBlkGitVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock x:Name="txtBlkGitVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
             <Label x:Name="lblFTPVersion" Content="FTP" Style="{StaticResource StatusLabelStyle}" ToolTip="Obligatoire"/>
-        <TextBlock x:Name="txtBlkFTPVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock x:Name="txtBlkFTPVersion" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
