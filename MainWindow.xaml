@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-       WindowStyle="None" Height="688" Width="1041" WindowStartupLocation="CenterScreen">
+        WindowStyle="None" Height="688" Width="1041" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="FontFamily" Value="Microsoft Sans Serif"/>
