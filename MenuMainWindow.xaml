@@ -27,7 +27,7 @@
         <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Margin="4,4,0,0" Width="32" Source="C:/_Tech/Applications/Source/Images/Icone.ico"/>
         <Label x:Name="lblTitre" Content="Menu - Boite à outils du technicien" Grid.RowSpan="3" Grid.ColumnSpan="3" FontWeight="SemiBold" Foreground="Azure" FontSize="16" FontFamily="Arial" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top" Width="400"/>
         <Label x:Name="lblChoisirOption" Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="1" Content="Choisissez une option" VerticalAlignment="top" Width="400" Background="DarkRed" Margin="0,60,0,0"/>
-        
+
         <Grid x:Name="gridMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -61,8 +61,8 @@
                 <Label x:Name="lblFTPVersion_Menu" Content="FTP" Style="{StaticResource StatusLabelStyle}" ToolTip="Obligatoire"/>
                 <TextBlock x:Name="txtBlkFTPVersion_Menu" Text="Introuvable" Style="{StaticResource TextBlockStyle}"/>
             </StackPanel>
-                <Button x:Name="btnWinget_Menu" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,25,0"/>
-                <Button x:Name="btnChoco_Menu" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,105,25,0"/>
+            <Button x:Name="btnWinget_Menu" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,10,0"/>
+            <Button x:Name="btnChoco_Menu" Grid.Row="1" Grid.Column="2" Content="Corriger" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,105,25,0"/>
         </Grid>
         <Grid x:Name="gridOptimisation_Nettoyage" Visibility="Collapsed" Margin="0,60,0,0">
             <Button x:Name="btnUpdate_Optimisation_Nettoyage" Content="Windows Update"  Style="{StaticResource ButtonStyle}" Margin="460,100,0,0"  Background="darkcyan"/>
@@ -80,19 +80,19 @@
             <Button x:Name="btnMenu_Optimisation_Nettoyage" Content="Menu principal"  Style="{StaticResource ButtonStyle}" Margin="25,35,0,0"  Background="darkred"/>
         </Grid>
         <Grid x:Name="gridDesinfection" Visibility="Collapsed" Margin="0,60,0,0">
-        <Button x:Name="btnProcess_Explorer_Desinfection" Content="Process_Explorer" Style="{StaticResource ButtonStyle}" Margin="670,300,0,0" Background="LightGray"/>
-        <Button x:Name="btnRKill_Desinfection" Content="RKill" Style="{StaticResource ButtonStyle}" Margin="670,200,0,0" Background="red"/>
-        <Button x:Name="btnAutoruns_Desinfection" Content="Autoruns" Style="{StaticResource ButtonStyle}" Margin="200,200,0,0" Background="LightGray"/>
-        <Button x:Name="btnHDD_Desinfection" Content="Nettoyage HDD" Style="{StaticResource ButtonStyle}" Margin="200,400,0,0" Background="darkcyan"/>
-        <Button x:Name="btnCcleaner_Desinfection" Content="Ccleaner" Style="{StaticResource ButtonStyle}" Margin="200,300,0,0" Background="darkgreen"/>
-        <Button x:Name="btnRevo_Desinfection" Content="Revo" Style="{StaticResource ButtonStyle}" Margin="670,400,0,0" Background="cyan"/>
-        <Button x:Name="btnADWcleaner_Desinfection" Content="ADWcleaner" Style="{StaticResource ButtonStyle}" Margin="460,100,0,0" Background="Yellow"/>
-        <Button x:Name="btnMalwareByte_Desinfection" Content="MalwareByte" Style="{StaticResource ButtonStyle}" Margin="460,200,0,0" Background="magenta"/>
-        <Button x:Name="btnSuperAntiSpyware_Desinfection" Content="SuperAntiSpyware" Style="{StaticResource ButtonStyle}" Margin="460,300,0,0" Background="cyan"/>
-        <Button x:Name="btnHitmanPro_Desinfection" Content="HitmanPro" Style="{StaticResource ButtonStyle}" Margin="460,400,0,0" Background="darkcyan"/>
-        <Button x:Name="btnRogueKiller_Desinfection" Content="RogueKiller" Style="{StaticResource ButtonStyle}" Margin="460,500,0,0" Background="darkgreen"/>
-        <Button x:Name="btnQuit_Desinfection" Content="Quitter" Style="{StaticResource ButtonStyle}" Margin="460,575,0,0" Background="darkred"/>
-        <Button x:Name="btnMenu_Desinfection" Content="Menu principal" Style="{StaticResource ButtonStyle}" Margin="25,35,0,0" Background="darkred"/>
+            <Button x:Name="btnProcess_Explorer_Desinfection" Content="Process_Explorer" Style="{StaticResource ButtonStyle}" Margin="670,300,0,0" Background="LightGray"/>
+            <Button x:Name="btnRKill_Desinfection" Content="RKill" Style="{StaticResource ButtonStyle}" Margin="670,200,0,0" Background="red"/>
+            <Button x:Name="btnAutoruns_Desinfection" Content="Autoruns" Style="{StaticResource ButtonStyle}" Margin="200,200,0,0" Background="LightGray"/>
+            <Button x:Name="btnHDD_Desinfection" Content="Nettoyage HDD" Style="{StaticResource ButtonStyle}" Margin="200,400,0,0" Background="darkcyan"/>
+            <Button x:Name="btnCcleaner_Desinfection" Content="Ccleaner" Style="{StaticResource ButtonStyle}" Margin="200,300,0,0" Background="darkgreen"/>
+            <Button x:Name="btnRevo_Desinfection" Content="Revo" Style="{StaticResource ButtonStyle}" Margin="670,400,0,0" Background="cyan"/>
+            <Button x:Name="btnADWcleaner_Desinfection" Content="ADWcleaner" Style="{StaticResource ButtonStyle}" Margin="460,100,0,0" Background="Yellow"/>
+            <Button x:Name="btnMalwareByte_Desinfection" Content="MalwareByte" Style="{StaticResource ButtonStyle}" Margin="460,200,0,0" Background="magenta"/>
+            <Button x:Name="btnSuperAntiSpyware_Desinfection" Content="SuperAntiSpyware" Style="{StaticResource ButtonStyle}" Margin="460,300,0,0" Background="cyan"/>
+            <Button x:Name="btnHitmanPro_Desinfection" Content="HitmanPro" Style="{StaticResource ButtonStyle}" Margin="460,400,0,0" Background="darkcyan"/>
+            <Button x:Name="btnRogueKiller_Desinfection" Content="RogueKiller" Style="{StaticResource ButtonStyle}" Margin="460,500,0,0" Background="darkgreen"/>
+            <Button x:Name="btnQuit_Desinfection" Content="Quitter" Style="{StaticResource ButtonStyle}" Margin="460,575,0,0" Background="darkred"/>
+            <Button x:Name="btnMenu_Desinfection" Content="Menu principal" Style="{StaticResource ButtonStyle}" Margin="25,35,0,0" Background="darkred"/>
         </Grid>
         <Grid x:Name="gridDiagnostique" Visibility="Collapsed" Margin="0,60,0,0">
             <Button x:Name="btnbat_Diagnostique" Content="Batterie" Style="{StaticResource ButtonStyle}" Margin="445,100,0,0"  Background="White"/>
